@@ -1,0 +1,101 @@
+/* Austin's Code */
+.bg-f5f5f5 { background-color: #f5f5f5; }
+body { background-color: #f5f5f5; }
+.new-card .card { border-radius: 80px !important; transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */ }
+.new-card .card:hover { transform: translateY(-8px) scale(1.03); /* lift & grow */ box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* deeper shadow */ text-decoration: none !important; }
+/* optional: subtle brightness on image */ .new-card .card img { border-radius: 80px !important; transition: transform 0.3s ease, filter 0.3s ease; }
+.new-card .card:hover img { transform: scale(1.05); filter: brightness(1.1); /* slightly brighter image */ }
+.new-card p { font-size: 1rem !important; /* 1rem = browser default (usually 16px) */ }
+.new-card .card a { border-radius: 80px !important; padding: 0.5rem 1rem !important;  /* standard button padding */ display: inline-block; /* so padding takes effect */ text-decoration: none !important; /* remove underline if needed */}
+.new-card .card-heading { text-decoration: none !important; }
+
+/* default (first, third, etc.) */
+.new-ping-pong .row.ping-pong-item.no-gutters {
+  background: linear-gradient(to right, #0060AF, rgb(92,46,145)) !important;
+  border-radius: 100px;
+}
+
+.new-ping-pong .row.ping-pong-item.no-gutters .item-image{
+  border-radius: 100px;
+}
+
+/* alternate (second, fourth, etc.) */
+.new-ping-pong .row.ping-pong-item.no-gutters:nth-child(even) {
+  background: linear-gradient(to left, #0060AF, rgb(92,46,145)) !important;
+}
+
+.new-ping-pong .row.ping-pong-item.no-gutters .item-description {
+  padding:80px;
+}
+
+/* style the <a> itself as a button */
+.new-ping-pong .col-auto.cta-link a {
+  background-color: #ffffff !important; /* white background */
+  color: #0060AF !important;            /* blue text */
+  padding: 0.75rem 1rem !important;      /* spacing */
+  border-radius: 100px !important;      /* rounded corners */
+  display: inline-block !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* hover effect */
+.new-ping-pong .col-auto.cta-link a:hover {
+  background-color: #0060AF !important; /* blue background */
+  color: #ffffff !important;            /* white text */
+  text-decoration: none !important;
+}
+
+.section-banner .banner-wrapper .block-title {
+    font-size: 50px !important;
+    color: #0060AF !important;
+    line-height: 50px;
+    font-weight: 700 !important;
+}
+
+.section-banner .hero__banner__sub_frame .hero_banner-content .col {
+    border-radius: 50px !important;
+}
+
+.hero__banner__standard .hero_banner-content {
+        border-radius: 50px !important;
+}
+
+.hero__banner__standard .hero_banner-content .block-title {
+    margin-bottom: 0;
+}
+
+/* Base card style */
+.new-ping-pong .row.ping-pong-item.no-gutters {
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* grow first */
+  will-change: transform;
+}
+
+/* Lift & grow the whole row */
+.new-ping-pong .row.ping-pong-item.no-gutters:hover {
+  transform: translateY(-8px) scale(1.03); /* lift & grow */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15); /* deeper shadow */
+}
+
+/* Base image style */
+.new-ping-pong .row.ping-pong-item.no-gutters .item-image {
+  transition: transform 0.6s ease 0.2s, box-shadow 0.6s ease 0.2s; 
+  /* ^ 0.2s delay so it moves after the card grows */
+  will-change: transform;
+}
+
+/* odd rows: image moves down-right after delay */
+.new-ping-pong .row.ping-pong-item.no-gutters:nth-child(odd):hover .item-image {
+  transform: translate(70px, 40px); /* down & right */
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* even rows: image moves up-left after delay */
+.new-ping-pong .row.ping-pong-item.no-gutters:nth-child(even):hover .item-image {
+  transform: translate(-70px, -40px); /* up & left */
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+
+
